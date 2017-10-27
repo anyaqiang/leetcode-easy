@@ -1,0 +1,22 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        boolean s=true;
+        int a=0;
+        if(x<0||(x%10==0&&x!=0)){             
+            s=false;
+        }
+        else{
+            while(x>a){
+                a=a*10+x%10;
+                x=x/10;
+            }
+            if(x==a||x==a/10){               
+                s=true;
+            }
+            else
+                s=false;
+        }
+        return s;
+       
+    }
+}
