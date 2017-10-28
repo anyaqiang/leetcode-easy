@@ -19,11 +19,11 @@ class Solution {
                         n++;
                         break;
                     }
-                }
+            }
             else if(s.charAt(i)=='{'){                    
                     m[n]='{';
                     n++;
-                }
+            }
             else if(s.charAt(i)=='}'){
                     if(n>0){
                         if(m[n-1]=='{')
@@ -34,7 +34,7 @@ class Solution {
                             break;
                         }
                     }
-                }               
+             }               
             else if(s.charAt(i)=='['){                    
                     m[n]='[';
                     n++;
