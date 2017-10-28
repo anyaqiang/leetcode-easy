@@ -31,8 +31,7 @@ class Solution {
                 }
                 else{
                     a+=10;
-                }
-                
+                }  
             }
             else if(s.charAt(i)=='L'){
                   if(i>0){
