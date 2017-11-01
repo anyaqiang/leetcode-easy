@@ -6,7 +6,7 @@ class Solution {
                i++;
            }
            else
-                break;
+               break;
         }
         return i;
     }
