@@ -1,0 +1,79 @@
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int j=0,n=nums.length,max=0,key=0;
+        int [] s=new int [n];
+        while(j<n && nums[j]<=0){
+            j++;
+        }
+        if(j==n){
+            Arrays.sort(nums);
+            return nums[n-1];
+        }
+        else{
+            for(int i=0;i<n;i++){
+        	    key+=nums[i];
+        	    if(key>0) {
+            	    if(key>max) {
+            		    max=key;
+            	    }
+        	    }
+        	    else {
+        		    key=0;
+        	    }
+            }
+		    return max;            
+        }
+
+    }
+}
+/*
+*Silly idea:Find every possible situation，then find the biggest one
+*class Solution {
+*    public int maxSubArray(int[] nums) {
+*        int sum=0,n=nums.length,k=0;
+*        int [] s=new int [(1+n)*n/2];
+*
+*        for(int i=0;i<n;i++){
+*            int x=0;
+*            for(int j=i;j<n;j++){
+*            	if(k<(1+n)*n/2) {
+*                	x+=nums[j];
+*                    s[k]=x;
+*                	k++;
+*            	}
+*            }
+*        }
+*        Arrays.sort(s);
+*		System.out.println(s[s.length-1]);
+*        for(int i=0;i<((1+n)*n/2)-1;i++) {
+*        	if(s[i]>s[i+1]) {
+*        		int tmp=s[i];
+*        		s[i]=s[i+1];
+*        		s[i+1]=tmp;
+*        	}
+*        }
+*        return s[s.length-1];
+*    }
+*}
+*
+*this is another solution,but if nums[i]<0,that max<0,so it have a problem,the key=?
+*
+*class Solution {
+*    public int maxSubArray(int[] nums) {
+*        int max=0,n=nums.length,key=0;
+*        int [] s=new int [n];
+*        for(int i=0;i<n;i++){
+*        	key+=nums[i];
+*        	if(key>0) {
+*            	if(key>max) {
+*            		max=key;
+*            	}
+*        	}
+*        	else {
+*        		key=0;
+*        	}
+*        }
+*		return max;
+*    }
+*}
+*/
