@@ -27,3 +27,20 @@ class Solution {
 *      return s.trim().length()-1-s.trim().lastIndexOf(" ");
 *    }
 */
+
+/*
+* this solution O(n)
+* Given a string s consists of upper/lower-case alphabets and empty space characters ' ',so use split() and find last one.
+* class Solution {
+*    public int lengthOfLastWord(String s) {
+*        String s1=" +";
+*        String arr[]=s.split(s1);
+*        if(arr.length==0)
+*            return 0;
+*        else{
+*            String s2=arr[arr.length-1];
+*            return s2.length();
+*        }
+*    }
+* }
+*/
