@@ -20,7 +20,7 @@ class Solution {
 /*
 * Spaces can appear at the end of the string,so you should find the location of the first upper/lower-case alphabets.
 * use trim() and lastIndexOf() function.
-* trim()----Remove the Spaces before and after the string.
+* trim()----Remove the Spaces before and after the string. If found, return to the Index;if not found, return -1.
 * lastIndexOf()----The location of the last occurrence. 
 * class Solution {
 *    public int lengthOfLastWord(String s) {
